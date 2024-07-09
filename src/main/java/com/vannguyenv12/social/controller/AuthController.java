@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.vannguyenv12.social.dto.AuthResponse;
 import com.vannguyenv12.social.dto.LoginDto;
+import com.vannguyenv12.social.exception.BadRequestException;
 import com.vannguyenv12.social.service.impl.JwtServiceImp;
 
 import lombok.RequiredArgsConstructor;

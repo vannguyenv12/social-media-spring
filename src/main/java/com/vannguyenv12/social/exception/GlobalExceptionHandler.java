@@ -27,7 +27,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
     }
 
     @ExceptionHandler(BadRequestException.class)
-    public ResponseEntity<ErrorDetail> handleBadRequestException(NotFoundException exception, WebRequest webRequest) {
+    public ResponseEntity<ErrorDetail> handleBadRequestException(BadRequestException exception, WebRequest webRequest) {
         ErrorDetail errorDetail = new ErrorDetail(LocalDateTime.now(), exception.getMessage(),
                 webRequest.getDescription(false));
         return new ResponseEntity<>(errorDetail, HttpStatus.BAD_REQUEST);
